@@ -1,6 +1,6 @@
 import { Mark, GitHub } from "./icons";
 
-const REPO_URL = "https://github.com/vexylt";
+const REPO_URL = "https://github.com/prasannaPratapSingh/vexylt";
 
 const GROUPS = [
   {

@@ -61,7 +61,7 @@ export function Hero() {
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink-2">
             Vexylt is a developer-first TypeScript SDK for the whole agent
-            lifecycle — tools, streaming, sessions, structured outputs and
+            lifecycle, tools, streaming, sessions, structured outputs and
             guardrails, in one clean API. You write what the agent does; Vexylt
             runs it.
           </p>

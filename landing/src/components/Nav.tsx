@@ -9,7 +9,7 @@ const LINKS = [
 ];
 
 // Placeholder — point this at the real repo once it's public.
-const REPO_URL = "https://github.com/vexylt";
+const REPO_URL = "https://github.com/prasannaPratapSingh/vexylt";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
