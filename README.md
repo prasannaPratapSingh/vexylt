@@ -4,7 +4,7 @@
 
 Vexylt is a developer-first TypeScript SDK for building AI agents with OpenAI.
 
-It provides a simple and extensible runtime for agents, tools, streaming, sessions, structured outputs, guardrails, and multi-agent workflows.
+It provides a simple and extensible API for agents, tools, streaming, sessions, structured outputs, guardrails, and multi-agent workflows — and runs them for you.
 
 > **Build. Run. Ship AI Agents.**
 
