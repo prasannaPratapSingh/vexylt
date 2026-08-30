@@ -64,7 +64,7 @@ export class Agent {
     constructor(builder: AgentBuilder) {
         this.toolMap = new Map();
         this.openai = new OpenAI({
-            apiKey: "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",
+            apiKey:""
         });
 
         for (const t of builder.toolList) {
