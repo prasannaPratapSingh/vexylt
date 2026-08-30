@@ -92,7 +92,7 @@ export function Waitlist() {
                       <button
                         type="submit"
                         disabled={status === "pending"}
-                        className="group inline-flex items-center justify-center gap-2 rounded-xl bg-lime px-5 py-3 font-mono text-sm font-semibold text-ink transition-all hover:bg-lime-deep disabled:opacity-70"
+                        className="group inline-flex items-center justify-center gap-2 rounded-xl bg-lime px-5 py-3 font-mono text-sm font-semibold text-ink transition-all hover:bg-lime-deep active:translate-y-px disabled:opacity-70"
                       >
                         {status === "pending" ? (
                           <>

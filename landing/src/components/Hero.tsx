@@ -56,7 +56,7 @@ export function Hero() {
           <h1 className="mt-6 text-display">
             Infrastructure
             <br className="hidden sm:block" /> for AI{" "}
-            <span className="hl hl-lime">agents</span>.
+            <span className="hl hl-lime hl-draw">agents</span>.
           </h1>
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-ink-2">
@@ -69,7 +69,7 @@ export function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a
               href="#waitlist"
-              className="group inline-flex items-center justify-center gap-2 rounded-lg bg-violet px-5 py-3 font-mono text-sm font-medium text-white transition-all hover:bg-violet-ink hover:shadow-[0_16px_30px_-14px_rgba(90,63,240,0.8)]"
+              className="group inline-flex items-center justify-center gap-2 rounded-lg bg-violet px-5 py-3 font-mono text-sm font-medium text-white transition-all hover:bg-violet-ink hover:shadow-[0_16px_30px_-14px_rgba(90,63,240,0.8)] active:translate-y-px"
             >
               Join the waitlist
               <ArrowRight
@@ -80,7 +80,7 @@ export function Hero() {
             </a>
             <a
               href="#quickstart"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-line-2 bg-surface px-5 py-3 font-mono text-sm text-ink transition-colors hover:border-ink"
+              className="inline-flex items-center justify-center gap-2 rounded-lg border border-line-2 bg-surface px-5 py-3 font-mono text-sm text-ink transition-colors hover:border-ink active:translate-y-px"
             >
               Read the quickstart
             </a>

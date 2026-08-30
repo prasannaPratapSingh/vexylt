@@ -100,9 +100,9 @@ export function Features() {
         <Reveal delay={80}>
           <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[minmax(190px,auto)]">
             {/* anchor: the core runtime */}
-            <article className="lift flex flex-col justify-between rounded-2xl border border-violet/25 bg-violet-soft/60 p-6 sm:col-span-2 lg:col-span-2 lg:row-span-2">
+            <article className="group lift flex flex-col justify-between rounded-2xl border border-violet/25 bg-violet-soft/60 p-6 sm:col-span-2 lg:col-span-2 lg:row-span-2">
               <div>
-                <span className="grid h-11 w-11 place-items-center rounded-xl bg-violet text-white">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-violet text-white transition-transform duration-300 group-hover:-translate-y-0.5">
                   <RuntimeIcon width={22} height={22} />
                 </span>
                 <h3 className="mt-5 text-h3 text-ink">Core agent runtime</h3>
@@ -131,10 +131,10 @@ export function Features() {
             {FEATURES.map((f) => (
               <article
                 key={f.title}
-                className={`lift flex flex-col rounded-2xl border border-line bg-surface p-6 ${f.span}`}
+                className={`group lift flex flex-col rounded-2xl border border-line bg-surface p-6 ${f.span}`}
               >
                 <span
-                  className={`grid h-10 w-10 place-items-center rounded-xl ${TILE[f.tone]}`}
+                  className={`grid h-10 w-10 place-items-center rounded-xl transition-transform duration-300 group-hover:-translate-y-0.5 ${TILE[f.tone]}`}
                 >
                   <f.icon width={20} height={20} />
                 </span>

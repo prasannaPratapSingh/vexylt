@@ -24,7 +24,7 @@ export function Problem() {
             // why vexylt
           </p>
           <h2 className="mt-5 text-h2">
-            You don't need more <span className="strike">model plumbing</span>.
+            You don't need more <span className="strike strike-draw">model plumbing</span>.
             <br className="hidden sm:block" /> You need a{" "}
             <span className="hl hl-violet">runtime</span>.
           </h2>

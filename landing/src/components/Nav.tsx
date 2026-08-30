@@ -47,7 +47,7 @@ export function Nav() {
               <a
                 key={l.href}
                 href={l.href}
-                className="rounded-md px-3 py-2 font-mono text-[0.8rem] text-muted transition-colors hover:text-ink"
+                className="navlink rounded-md px-3 py-2 font-mono text-[0.8rem] text-muted transition-colors hover:text-ink"
               >
                 {l.label}
               </a>
@@ -66,7 +66,7 @@ export function Nav() {
             </a>
             <a
               href="#waitlist"
-              className="group inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 font-mono text-[0.8rem] font-medium text-paper transition-all hover:bg-violet"
+              className="group inline-flex items-center gap-1.5 rounded-full bg-ink px-4 py-2 font-mono text-[0.8rem] font-medium text-paper transition-all hover:bg-violet active:translate-y-px"
             >
               Join waitlist
               <ArrowRight

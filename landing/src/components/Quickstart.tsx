@@ -120,7 +120,7 @@ export function Quickstart() {
                   >
                     {sn.label}
                     {on && (
-                      <span className="absolute inset-x-2.5 -bottom-px h-0.5 rounded-full bg-violet" />
+                      <span className="absolute inset-x-2.5 -bottom-px h-0.5 origin-left animate-tab-underline rounded-full bg-violet" />
                     )}
                   </button>
                 );

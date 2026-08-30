@@ -62,6 +62,7 @@
   /* Animations */
   --animate-blink: blink 1.1s steps(2, jump-none) infinite;
   --animate-pulse-dot: pulse-dot 2.4s ease-in-out infinite;
+  --animate-tab-underline: tab-underline 0.28s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ------------------------------------------------------------------ *
@@ -146,6 +147,36 @@
   color: #fff;
 }
 
+/* Marker draw-in — the highlighter is dragged across the word once, on
+   entrance. Opt-in via .hl-draw so the static marks stay static. Only the
+   background sweeps; the text keeps its color the whole time. */
+.hl-draw {
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 0% 100%;
+  animation: hl-sweep 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.28s forwards;
+}
+.hl-lime.hl-draw {
+  background-color: transparent;
+  background-image: linear-gradient(var(--color-lime), var(--color-lime));
+}
+.hl-coral.hl-draw {
+  background-color: transparent;
+  background-image: linear-gradient(var(--color-coral), var(--color-coral));
+}
+.hl-violet.hl-draw {
+  background-color: transparent;
+  background-image: linear-gradient(var(--color-violet), var(--color-violet));
+}
+@keyframes hl-sweep {
+  from {
+    background-size: 0% 100%;
+  }
+  to {
+    background-size: 100% 100%;
+  }
+}
+
 /* Coral hand-strike for the "you don't need X" line */
 .strike {
   position: relative;
@@ -164,12 +195,48 @@
   transform: rotate(-1.8deg);
 }
 
+/* When the strike sits inside a Reveal, draw the coral line left→right as
+   the heading enters view. Opt-in via .strike-draw. */
+.strike-draw::after {
+  transform-origin: left center;
+  transform: rotate(-1.8deg) scaleX(0);
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.15s;
+}
+.reveal.is-in .strike-draw::after {
+  transform: rotate(-1.8deg) scaleX(1);
+}
+
 /* Marginalia — a mono code-comment note in the margin */
 .anno {
   font-family: var(--font-mono);
   font-size: 0.76rem;
   line-height: 1.4;
   color: var(--color-muted);
+}
+
+/* Nav link — a hairline violet underline that grows from the left on hover */
+.navlink {
+  position: relative;
+}
+.navlink::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.3rem;
+  height: 1.5px;
+  border-radius: 2px;
+  background: var(--color-violet);
+  transform: scaleX(0);
+  transform-origin: left center;
+  opacity: 0;
+  transition:
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.2s ease;
+}
+.navlink:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
 }
 
 /* Card lift */
@@ -221,6 +288,15 @@
   }
 }
 
+@keyframes tab-underline {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
 @keyframes line-in {
   from {
     opacity: 0;
@@ -259,5 +335,13 @@
   }
   .lift:hover {
     transform: none;
+  }
+  /* Land the entrance marks in their final state, no sweep. */
+  .hl-draw {
+    background-size: 100% 100% !important;
+    animation-delay: 0ms !important;
+  }
+  .strike-draw::after {
+    transform: rotate(-1.8deg) scaleX(1) !important;
   }
 }
